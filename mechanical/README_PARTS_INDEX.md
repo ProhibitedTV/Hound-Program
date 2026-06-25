@@ -7,17 +7,19 @@ This index tracks OpenSCAD files by part type.
 - `mechanical/lib/hound_constants.scad` — hardware dimensions, clearances, material assumptions.
 - `mechanical/lib/hound_primitives.scad` — rounded boxes, holes, tags, fins, lightening grids.
 
-## Alpha v0.1 Assembly
+## Alpha Assemblies
 
-- `mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad` — current conceptual assembly checkpoint.
+- `mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad` — first conceptual assembly checkpoint; useful for repo/part integration, visually too blocky.
+- `mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad` — refined elegance pass with lower stance, angled legs, tucked hip modules, and coherent alien exoshell.
 
 ## Head / Identity Shell
 
 - `mechanical/heads/alpha/hound_alpha_head_v02.scad` — Hound Alpha alien-animal head prototype.
 
-## Body Panels
+## Body Panels / Exoshell
 
 - `mechanical/body/alpha_side_panel_set.scad` — removable side/top body panels for Alpha silhouette and service access.
+- `mechanical/body/alpha_exoshell_v02.scad` — refined long tapered body shell used by Alpha v0.2.
 
 ## Feet
 
