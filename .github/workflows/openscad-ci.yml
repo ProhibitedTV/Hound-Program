@@ -35,7 +35,9 @@ jobs:
           openscad -q -o /tmp/hound-openscad-out/head_upper_shell.stl -D 'PART="upper_shell"' mechanical/heads/alpha/hound_alpha_head_v02.scad
           openscad -q -o /tmp/hound-openscad-out/head_lower_mandible.stl -D 'PART="lower_mandible"' mechanical/heads/alpha/hound_alpha_head_v02.scad
           openscad -q -o /tmp/hound-openscad-out/alien_hoof_core.stl -D 'PART="foot_core"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof.scad
-          openscad -q -o /tmp/hound-openscad-out/alien_hoof_coupon.stl -D 'PART="test_coupon"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof.scad
+          openscad -q -o /tmp/hound-openscad-out/alien_hoof_v02_core.stl -D 'PART="foot_core"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof_v02.scad
+          openscad -q -o /tmp/hound-openscad-out/alien_hoof_v02_coupon.stl -D 'PART="test_coupon"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof_v02.scad
+          openscad -q -o /tmp/hound-openscad-out/foot_interface_28mm.stl -D 'PART="adapter_plate"' mechanical/interfaces/foot_mount_m3_28mm.scad
           openscad -q -o /tmp/hound-openscad-out/servo_mount.stl -D 'PART="servo_mount"' mechanical/mounts/servo_mount_standard.scad
           openscad -q -o /tmp/hound-openscad-out/tube_clamp_pair.stl -D 'PART="clamp_pair"' mechanical/mounts/tube_clamp.scad
           openscad -q -o /tmp/hound-openscad-out/spine_plate.stl -D 'PART="spine_plate"' mechanical/frame/alpha_spine_plate.scad
