@@ -9,9 +9,11 @@ This index tracks OpenSCAD files by part type.
 
 ## Alpha Assemblies
 
-- `mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad` — first conceptual assembly checkpoint; useful for repo/part integration, visually too blocky.
-- `mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad` — refined elegance pass with lower stance and coherent alien exoshell, but legs still too blocky.
-- `mechanical/alpha_v0_3/hound_alpha_v0_3_assembly.scad` — articulated-leg refinement with hip pod, upper link, knee, lower link, ankle/pastern, and hoof.
+- `mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad` — first conceptual assembly checkpoint.
+- `mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad` — refined body silhouette checkpoint.
+- `mechanical/alpha_v0_3/hound_alpha_v0_3_assembly.scad` — articulated leg silhouette checkpoint.
+- `mechanical/alpha_v0_4/panel_split_test.scad` — first printable panel split test.
+- `mechanical/alpha_v0_4/leg_side_test_module.scad` — simplified leg side module for scale and stance review.
 
 ## Head / Identity Shell
 
@@ -19,22 +21,22 @@ This index tracks OpenSCAD files by part type.
 
 ## Body Panels / Exoshell
 
-- `mechanical/body/alpha_side_panel_set.scad` — removable side/top body panels for Alpha silhouette and service access.
-- `mechanical/body/alpha_exoshell_v02.scad` — refined long tapered body shell used by Alpha v0.2 and v0.3.
+- `mechanical/body/alpha_side_panel_set.scad` — removable side/top body panels.
+- `mechanical/body/alpha_exoshell_v02.scad` — refined long tapered body shell.
 
 ## Feet
 
 - `mechanical/feet/alien-hoof-type-a/hound_alien_hoof.scad` — original Alien Hoof Type A v0.1 module.
-- `mechanical/feet/alien-hoof-type-a/hound_alien_hoof_v02.scad` — manufacturing-minded v0.2 foot with stronger bosses, batch layout, adapter mock, and coating test coupon.
+- `mechanical/feet/alien-hoof-type-a/hound_alien_hoof_v02.scad` — manufacturing-minded v0.2 foot.
 
 ## Interfaces
 
-- `mechanical/interfaces/foot_mount_m3_28mm.scad` — reference 28 mm M3 foot interface used by Alien Hoof Type A.
+- `mechanical/interfaces/foot_mount_m3_28mm.scad` — reference 28 mm M3 foot interface.
 
 ## Legs and Joints
 
 - `mechanical/legs/leg_link_set.scad` — early upper/lower/tube leg link concepts.
-- `mechanical/legs/articulated_leg_v03.scad` — refined four-joint visual leg chain with hip, knee, ankle/pastern, and hoof.
+- `mechanical/legs/articulated_leg_v03.scad` — refined four-joint visual leg chain.
 - `mechanical/joints/hip_module.scad` — replaceable hip/shoulder servo module concept.
 
 ## Mounts
@@ -52,17 +54,17 @@ This index tracks OpenSCAD files by part type.
 
 ## Sensors / Lighting / Audio
 
-- `mechanical/sensors/front_sensor_pod.scad` — front sensor pod that reads as a sensor cluster, not a face.
-- `mechanical/lighting/led_diffuser_modules.scad` — straight and grouped LED diffuser modules.
+- `mechanical/sensors/front_sensor_pod.scad` — front sensor pod.
+- `mechanical/lighting/led_diffuser_modules.scad` — LED diffuser modules.
 - `mechanical/audio/audio_grille_module.scad` — removable audio grille module.
 
 ## Cable Management
 
-- `mechanical/cable_management/cable_clip_set.scad` — 4 mm, 6 mm, 8 mm cable clips and pass-through.
+- `mechanical/cable_management/cable_clip_set.scad` — cable clips and pass-through.
 
 ## Expression Experiments
 
-- `mechanical/expressions/expression_plate_test_rig.scad` — bench rig for micro-actuated armor expression tests.
+- `mechanical/expressions/expression_plate_test_rig.scad` — armor expression bench rig.
 
 ## Electronics Mounts
 
@@ -72,15 +74,15 @@ This index tracks OpenSCAD files by part type.
 
 - `mechanical/power/battery_sled.scad` — generic battery sled.
 
-## Safety / Bench Hardware
+## Bench Hardware
 
-- `mechanical/safety/bench_control_panel_mount.scad` — accessible bench control panel mount for early moving prototypes.
+- `mechanical/safety/bench_control_panel_mount.scad` — accessible bench control panel mount.
 
 ## Test Fixtures
 
 - `mechanical/test_fixtures/fastener_tolerance_gauge.scad` — real-printer clearance and insert gauge.
-- `mechanical/test_fixtures/alpha_service_stand.scad` — service stand fixture for wiring/calibration/leg work.
+- `mechanical/test_fixtures/alpha_service_stand.scad` — service stand fixture.
 
 ## Current principle
 
-The internals should remain serviceable and boring while the exterior becomes the alien-animal identity layer.
+Boring internals. Wild exterior. v0.4 starts turning the visual direction into printable subassemblies.
