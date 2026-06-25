@@ -29,14 +29,17 @@ jobs:
       - name: Export representative STLs
         run: |
           mkdir -p /tmp/hound-openscad-out
-          openscad -q -o /tmp/hound-openscad-out/alpha_assembly.stl -D 'PART="assembly"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
-          openscad -q -o /tmp/hound-openscad-out/alpha_bare.stl -D 'PART="bare"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
-          openscad -q -o /tmp/hound-openscad-out/alpha_print_layout.stl -D 'PART="print_layout"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v01_assembly.stl -D 'PART="assembly"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v01_print_layout.stl -D 'PART="print_layout"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v02_assembly.stl -D 'PART="assembly"' mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v02_bare_frame.stl -D 'PART="bare_frame"' mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v02_silhouette.stl -D 'PART="silhouette"' mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v02_print_layout.stl -D 'PART="print_layout"' mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/exoshell_v02.stl -D 'PART="assembly"' mechanical/body/alpha_exoshell_v02.scad
           openscad -q -o /tmp/hound-openscad-out/head_upper_shell.stl -D 'PART="upper_shell"' mechanical/heads/alpha/hound_alpha_head_v02.scad
           openscad -q -o /tmp/hound-openscad-out/head_lower_mandible.stl -D 'PART="lower_mandible"' mechanical/heads/alpha/hound_alpha_head_v02.scad
           openscad -q -o /tmp/hound-openscad-out/body_left_panel.stl -D 'PART="left_panel"' mechanical/body/alpha_side_panel_set.scad
           openscad -q -o /tmp/hound-openscad-out/body_top_panel.stl -D 'PART="top_panel"' mechanical/body/alpha_side_panel_set.scad
-          openscad -q -o /tmp/hound-openscad-out/alien_hoof_core.stl -D 'PART="foot_core"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof.scad
           openscad -q -o /tmp/hound-openscad-out/alien_hoof_v02_core.stl -D 'PART="foot_core"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof_v02.scad
           openscad -q -o /tmp/hound-openscad-out/alien_hoof_v02_coupon.stl -D 'PART="test_coupon"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof_v02.scad
           openscad -q -o /tmp/hound-openscad-out/foot_interface_28mm.stl -D 'PART="adapter_plate"' mechanical/interfaces/foot_mount_m3_28mm.scad
