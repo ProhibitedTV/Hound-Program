@@ -3,7 +3,13 @@ Hound Program // Alpha v0.1 Assembly
 
 This is a sanity-check assembly for the current OpenSCAD parts.
 It uses `use` so imported part files do not run their own PART selectors.
-It is not final chassis geometry. Real hardware dimensions must replace these assumptions.
+
+Important OpenSCAD note:
+`use` imports modules/functions but not top-level variable assignments.
+For v0.1, this assembly explicitly restates the module globals that imported
+parts expect. Later revisions should move these into parameterized modules.
+
+This is not final chassis geometry. Real hardware dimensions must replace these assumptions.
 */
 
 use <../frame/alpha_spine_plate.scad>
@@ -20,6 +26,73 @@ include <../lib/hound_primitives.scad>
 
 $fn = 48;
 PART = "assembly"; // assembly, bare, exploded, print_layout
+
+// -----------------------------------------------------------------------------
+// Imported-part globals restated for `use` compatibility.
+// These match the v0.1 standalone part files.
+// -----------------------------------------------------------------------------
+
+// Spine plate
+PLATE_LEN = 220;
+PLATE_W = 82;
+PLATE_THICK = 5;
+RAIL_SPACING = 56;
+RAIL_OD = CF_TUBE_12_OD;
+
+// Tube clamp
+TUBE_OD = CF_TUBE_12_OD;
+CLAMP_LEN = 34;
+CLAMP_W = 30;
+CLAMP_H = 22;
+
+// Alien hoof
+foot_w = 64;
+foot_l = 58;
+foot_h = 18;
+dish_depth = 5;
+edge_round = 6;
+mount_spacing = 28;
+mount_hole_d = 3.4;
+mount_counter_d = 6.5;
+mount_counter_h = 3.2;
+mount_boss_d = 12;
+mount_boss_h = 5;
+coating_allowance = 1.2;
+
+// Controller tray
+TRAY_L = 92;
+TRAY_W = 68;
+TRAY_H = 8;
+
+// Battery sled
+BAT_L = 106;
+BAT_W = 35;
+BAT_H = 28;
+SLED_WALL = 3;
+
+// Hound Alpha head
+EXPR = "alert";
+head_len = 168;
+head_w = 78;
+head_h = 52;
+wall = 2.6;
+clearance = 0.35;
+m3_d = 3.25;
+m3_clearance = 3.45;
+m3_head_d = 6.6;
+insert_d = 4.8;
+insert_depth = 5.8;
+servo9g_w = 23.5;
+servo9g_d = 12.2;
+servo9g_h = 24.0;
+led_slot_w = 4.6;
+led_slot_h = 3.2;
+cam_hole_d = 12.5;
+wire_channel_d = 8;
+
+// -----------------------------------------------------------------------------
+// Assembly layout assumptions.
+// -----------------------------------------------------------------------------
 
 BODY_Z = 92;
 LEG_X = 78;
@@ -39,6 +112,8 @@ module rail_visuals() {
         color([0.02,0.02,0.02]) translate([0,y,BODY_Z+10]) rotate([0,90,0]) cylinder(h=250,d=CF_TUBE_12_OD,center=true);
 }
 
+function yside_rotation(ysign) = ysign < 0 ? 180 : 0;
+
 module leg_station(xsign=1, ysign=1) {
     x = xsign * LEG_X;
     y = ysign * LEG_Y;
@@ -54,8 +129,6 @@ module leg_station(xsign=1, ysign=1) {
     color([0.08,0.08,0.08]) hull(){ translate(knee) sphere(d=9); translate(foot) sphere(d=8); }
     color(BODY_BLACK) translate(foot) rotate([0,0, side*8]) foot_core();
 }
-
-function yside_rotation(ysign) = ysign < 0 ? 180 : 0;
 
 module head_station() {
     color(BODY_BLACK) translate([HEAD_X,0,HEAD_Z]) upper_shell();
