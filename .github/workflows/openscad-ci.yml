@@ -30,11 +30,13 @@ jobs:
         run: |
           mkdir -p /tmp/hound-openscad-out
           openscad -q -o /tmp/hound-openscad-out/alpha_v01_assembly.stl -D 'PART="assembly"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
-          openscad -q -o /tmp/hound-openscad-out/alpha_v01_print_layout.stl -D 'PART="print_layout"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
           openscad -q -o /tmp/hound-openscad-out/alpha_v02_assembly.stl -D 'PART="assembly"' mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad
-          openscad -q -o /tmp/hound-openscad-out/alpha_v02_bare_frame.stl -D 'PART="bare_frame"' mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad
-          openscad -q -o /tmp/hound-openscad-out/alpha_v02_silhouette.stl -D 'PART="silhouette"' mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad
-          openscad -q -o /tmp/hound-openscad-out/alpha_v02_print_layout.stl -D 'PART="print_layout"' mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v03_assembly.stl -D 'PART="assembly"' mechanical/alpha_v0_3/hound_alpha_v0_3_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v03_bare_frame.stl -D 'PART="bare_frame"' mechanical/alpha_v0_3/hound_alpha_v0_3_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v03_leg_layout.stl -D 'PART="leg_layout"' mechanical/alpha_v0_3/hound_alpha_v0_3_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_v03_silhouette.stl -D 'PART="silhouette"' mechanical/alpha_v0_3/hound_alpha_v0_3_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/articulated_leg_front_left.stl -D 'PART="leg_front_left"' mechanical/legs/articulated_leg_v03.scad
+          openscad -q -o /tmp/hound-openscad-out/articulated_leg_joint_set.stl -D 'PART="joint_set"' mechanical/legs/articulated_leg_v03.scad
           openscad -q -o /tmp/hound-openscad-out/exoshell_v02.stl -D 'PART="assembly"' mechanical/body/alpha_exoshell_v02.scad
           openscad -q -o /tmp/hound-openscad-out/head_upper_shell.stl -D 'PART="upper_shell"' mechanical/heads/alpha/hound_alpha_head_v02.scad
           openscad -q -o /tmp/hound-openscad-out/head_lower_mandible.stl -D 'PART="lower_mandible"' mechanical/heads/alpha/hound_alpha_head_v02.scad
