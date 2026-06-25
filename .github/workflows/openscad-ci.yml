@@ -34,16 +34,28 @@ jobs:
           openscad -q -o /tmp/hound-openscad-out/alpha_print_layout.stl -D 'PART="print_layout"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
           openscad -q -o /tmp/hound-openscad-out/head_upper_shell.stl -D 'PART="upper_shell"' mechanical/heads/alpha/hound_alpha_head_v02.scad
           openscad -q -o /tmp/hound-openscad-out/head_lower_mandible.stl -D 'PART="lower_mandible"' mechanical/heads/alpha/hound_alpha_head_v02.scad
+          openscad -q -o /tmp/hound-openscad-out/body_left_panel.stl -D 'PART="left_panel"' mechanical/body/alpha_side_panel_set.scad
+          openscad -q -o /tmp/hound-openscad-out/body_top_panel.stl -D 'PART="top_panel"' mechanical/body/alpha_side_panel_set.scad
           openscad -q -o /tmp/hound-openscad-out/alien_hoof_core.stl -D 'PART="foot_core"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof.scad
           openscad -q -o /tmp/hound-openscad-out/alien_hoof_v02_core.stl -D 'PART="foot_core"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof_v02.scad
           openscad -q -o /tmp/hound-openscad-out/alien_hoof_v02_coupon.stl -D 'PART="test_coupon"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof_v02.scad
           openscad -q -o /tmp/hound-openscad-out/foot_interface_28mm.stl -D 'PART="adapter_plate"' mechanical/interfaces/foot_mount_m3_28mm.scad
+          openscad -q -o /tmp/hound-openscad-out/leg_upper_link.stl -D 'PART="upper_link"' mechanical/legs/leg_link_set.scad
+          openscad -q -o /tmp/hound-openscad-out/leg_tube_link.stl -D 'PART="tube_link"' mechanical/legs/leg_link_set.scad
+          openscad -q -o /tmp/hound-openscad-out/hip_module.stl -D 'PART="module_body"' mechanical/joints/hip_module.scad
           openscad -q -o /tmp/hound-openscad-out/servo_mount.stl -D 'PART="servo_mount"' mechanical/mounts/servo_mount_standard.scad
           openscad -q -o /tmp/hound-openscad-out/tube_clamp_pair.stl -D 'PART="clamp_pair"' mechanical/mounts/tube_clamp.scad
           openscad -q -o /tmp/hound-openscad-out/spine_plate.stl -D 'PART="spine_plate"' mechanical/frame/alpha_spine_plate.scad
+          openscad -q -o /tmp/hound-openscad-out/front_sensor_pod.stl -D 'PART="pod_shell"' mechanical/sensors/front_sensor_pod.scad
+          openscad -q -o /tmp/hound-openscad-out/led_channel.stl -D 'PART="straight_channel"' mechanical/lighting/led_diffuser_modules.scad
+          openscad -q -o /tmp/hound-openscad-out/audio_grille.stl -D 'PART="grille"' mechanical/audio/audio_grille_module.scad
+          openscad -q -o /tmp/hound-openscad-out/cable_clip_6mm.stl -D 'PART="clip_6mm"' mechanical/cable_management/cable_clip_set.scad
           openscad -q -o /tmp/hound-openscad-out/controller_tray.stl -D 'PART="tray"' mechanical/electronics_mounts/controller_tray.scad
           openscad -q -o /tmp/hound-openscad-out/battery_sled.stl -D 'PART="sled"' mechanical/power/battery_sled.scad
           openscad -q -o /tmp/hound-openscad-out/armor_medium_panel.stl -D 'PART="medium_panel"' mechanical/armor/armor_plate_family.scad
+          openscad -q -o /tmp/hound-openscad-out/bench_control_panel.stl -D 'PART="panel"' mechanical/safety/bench_control_panel_mount.scad
+          openscad -q -o /tmp/hound-openscad-out/fastener_gauge.stl -D 'PART="gauge"' mechanical/test_fixtures/fastener_tolerance_gauge.scad
+          openscad -q -o /tmp/hound-openscad-out/service_stand_left.stl -D 'PART="left_cradle"' mechanical/test_fixtures/alpha_service_stand.scad
 
       - name: Upload generated STL artifacts
         uses: actions/upload-artifact@v4
