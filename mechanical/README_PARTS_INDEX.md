@@ -10,7 +10,8 @@ This index tracks OpenSCAD files by part type.
 ## Alpha Assemblies
 
 - `mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad` — first conceptual assembly checkpoint; useful for repo/part integration, visually too blocky.
-- `mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad` — refined elegance pass with lower stance, angled legs, tucked hip modules, and coherent alien exoshell.
+- `mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad` — refined elegance pass with lower stance and coherent alien exoshell, but legs still too blocky.
+- `mechanical/alpha_v0_3/hound_alpha_v0_3_assembly.scad` — articulated-leg refinement with hip pod, upper link, knee, lower link, ankle/pastern, and hoof.
 
 ## Head / Identity Shell
 
@@ -19,7 +20,7 @@ This index tracks OpenSCAD files by part type.
 ## Body Panels / Exoshell
 
 - `mechanical/body/alpha_side_panel_set.scad` — removable side/top body panels for Alpha silhouette and service access.
-- `mechanical/body/alpha_exoshell_v02.scad` — refined long tapered body shell used by Alpha v0.2.
+- `mechanical/body/alpha_exoshell_v02.scad` — refined long tapered body shell used by Alpha v0.2 and v0.3.
 
 ## Feet
 
@@ -33,6 +34,7 @@ This index tracks OpenSCAD files by part type.
 ## Legs and Joints
 
 - `mechanical/legs/leg_link_set.scad` — early upper/lower/tube leg link concepts.
+- `mechanical/legs/articulated_leg_v03.scad` — refined four-joint visual leg chain with hip, knee, ankle/pastern, and hoof.
 - `mechanical/joints/hip_module.scad` — replaceable hip/shoulder servo module concept.
 
 ## Mounts
