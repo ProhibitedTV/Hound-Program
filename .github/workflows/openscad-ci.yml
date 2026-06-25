@@ -4,13 +4,13 @@ on:
   push:
     paths:
       - "mechanical/**/*.scad"
-      - "scripts/openscad_smoke_test.sh"
       - ".github/workflows/openscad-ci.yml"
+      - "Makefile"
   pull_request:
     paths:
       - "mechanical/**/*.scad"
-      - "scripts/openscad_smoke_test.sh"
       - ".github/workflows/openscad-ci.yml"
+      - "Makefile"
   workflow_dispatch:
 
 jobs:
@@ -26,9 +26,22 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y openscad
 
-      - name: Run OpenSCAD smoke tests
+      - name: Export representative STLs
         run: |
-          bash scripts/openscad_smoke_test.sh /tmp/hound-openscad-out
+          mkdir -p /tmp/hound-openscad-out
+          openscad -q -o /tmp/hound-openscad-out/alpha_assembly.stl -D 'PART="assembly"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_bare.stl -D 'PART="bare"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/alpha_print_layout.stl -D 'PART="print_layout"' mechanical/alpha_v0_1/hound_alpha_v0_1_assembly.scad
+          openscad -q -o /tmp/hound-openscad-out/head_upper_shell.stl -D 'PART="upper_shell"' mechanical/heads/alpha/hound_alpha_head_v02.scad
+          openscad -q -o /tmp/hound-openscad-out/head_lower_mandible.stl -D 'PART="lower_mandible"' mechanical/heads/alpha/hound_alpha_head_v02.scad
+          openscad -q -o /tmp/hound-openscad-out/alien_hoof_core.stl -D 'PART="foot_core"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof.scad
+          openscad -q -o /tmp/hound-openscad-out/alien_hoof_coupon.stl -D 'PART="test_coupon"' mechanical/feet/alien-hoof-type-a/hound_alien_hoof.scad
+          openscad -q -o /tmp/hound-openscad-out/servo_mount.stl -D 'PART="servo_mount"' mechanical/mounts/servo_mount_standard.scad
+          openscad -q -o /tmp/hound-openscad-out/tube_clamp_pair.stl -D 'PART="clamp_pair"' mechanical/mounts/tube_clamp.scad
+          openscad -q -o /tmp/hound-openscad-out/spine_plate.stl -D 'PART="spine_plate"' mechanical/frame/alpha_spine_plate.scad
+          openscad -q -o /tmp/hound-openscad-out/controller_tray.stl -D 'PART="tray"' mechanical/electronics_mounts/controller_tray.scad
+          openscad -q -o /tmp/hound-openscad-out/battery_sled.stl -D 'PART="sled"' mechanical/power/battery_sled.scad
+          openscad -q -o /tmp/hound-openscad-out/armor_medium_panel.stl -D 'PART="medium_panel"' mechanical/armor/armor_plate_family.scad
 
       - name: Upload generated STL artifacts
         uses: actions/upload-artifact@v4
