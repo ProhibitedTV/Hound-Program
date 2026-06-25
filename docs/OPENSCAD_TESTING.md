@@ -1,38 +1,26 @@
 # OpenSCAD Testing
 
-The Hound Program repo has an OpenSCAD smoke test path for checking that v0.1 files can render/export representative STL files.
+The Hound Program repo uses GitHub Actions as the primary OpenSCAD smoke-test path.
 
 ## GitHub Actions
 
-Workflow:
+The workflow lives at .github/workflows/openscad-ci.yml.
 
-- `.github/workflows/openscad-ci.yml`
-
-The workflow installs OpenSCAD on Ubuntu and runs:
-
-```bash
-bash scripts/openscad_smoke_test.sh /tmp/hound-openscad-out
-```
-
-It then uploads generated STL files as a workflow artifact.
+The workflow installs OpenSCAD on Ubuntu and directly exports representative STL files from tracked OpenSCAD parts. No separate shell script is required.
 
 ## Local testing
 
-With OpenSCAD installed:
+With OpenSCAD installed, use the workflow as the source of truth for local commands.
 
-```bash
-make openscad-test
-```
+Minimum useful local checks:
 
-or:
-
-```bash
-bash scripts/openscad_smoke_test.sh ./build/openscad
-```
+- Export the alien hoof foot core.
+- Export the standard servo mount.
+- Export the Alpha v0.1 print layout.
 
 ## What the smoke test checks
 
-The script exports representative STL files for:
+The workflow exports representative STL files for:
 
 - Alpha v0.1 assembly modes.
 - Hound Alpha head parts.
@@ -43,14 +31,13 @@ The script exports representative STL files for:
 - Controller tray.
 - Battery sled.
 - Armor panel.
-- Expression rig.
 
 ## Important design note
 
-OpenSCAD `use` imports modules and functions, but it does not import top-level variable assignments from the used files. The Alpha v0.1 assembly currently restates imported-part globals for compatibility.
+OpenSCAD use imports modules and functions, but it does not import top-level variable assignments from used files. The Alpha v0.1 assembly currently restates imported-part globals for compatibility.
 
 Future cleanup target:
 
 - Convert part modules to accept explicit parameters.
-- Keep constants in `mechanical/lib/hound_constants.scad`.
+- Keep constants in mechanical/lib/hound_constants.scad.
 - Reduce hidden global-variable dependencies.
