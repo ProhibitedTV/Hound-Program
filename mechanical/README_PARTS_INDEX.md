@@ -13,7 +13,12 @@ This index tracks OpenSCAD files by part type.
 
 ## Feet
 
-- `mechanical/feet/alien-hoof-type-a/hound_alien_hoof.scad` — batch-manufacturable alien hoof foot module.
+- `mechanical/feet/alien-hoof-type-a/hound_alien_hoof.scad` — original Alien Hoof Type A v0.1 module.
+- `mechanical/feet/alien-hoof-type-a/hound_alien_hoof_v02.scad` — manufacturing-minded v0.2 foot with stronger bosses, batch layout, adapter mock, and coating test coupon.
+
+## Interfaces
+
+- `mechanical/interfaces/foot_mount_m3_28mm.scad` — reference 28 mm M3 foot interface used by Alien Hoof Type A.
 
 ## Mounts
 
