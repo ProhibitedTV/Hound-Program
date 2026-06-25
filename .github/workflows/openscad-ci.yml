@@ -1,0 +1,38 @@
+name: OpenSCAD Smoke Test
+
+on:
+  push:
+    paths:
+      - "mechanical/**/*.scad"
+      - "scripts/openscad_smoke_test.sh"
+      - ".github/workflows/openscad-ci.yml"
+  pull_request:
+    paths:
+      - "mechanical/**/*.scad"
+      - "scripts/openscad_smoke_test.sh"
+      - ".github/workflows/openscad-ci.yml"
+  workflow_dispatch:
+
+jobs:
+  openscad-smoke-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install OpenSCAD
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y openscad
+
+      - name: Run OpenSCAD smoke tests
+        run: |
+          bash scripts/openscad_smoke_test.sh /tmp/hound-openscad-out
+
+      - name: Upload generated STL artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: openscad-smoke-test-stls
+          path: /tmp/hound-openscad-out/*.stl
+          if-no-files-found: error
