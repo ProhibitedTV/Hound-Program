@@ -13,7 +13,8 @@ This index tracks OpenSCAD files by part type.
 - `mechanical/alpha_v0_2/hound_alpha_v0_2_assembly.scad` — refined body silhouette checkpoint.
 - `mechanical/alpha_v0_3/hound_alpha_v0_3_assembly.scad` — articulated leg silhouette checkpoint.
 - `mechanical/alpha_v0_4/panel_split_test.scad` — first printable panel split test.
-- `mechanical/alpha_v0_4/leg_side_test_module.scad` — simplified leg side module for scale and stance review.
+- `mechanical/alpha_v0_4/leg_side_test_module.scad` — first simplified leg side module for scale and stance review.
+- `mechanical/alpha_v0_4/leg_side_test_module_v02.scad` — refined v0.4.2 leg-side module with flat link plates, pivot holes, hip bracket, and hoof adapter.
 
 ## Head / Identity Shell
 
