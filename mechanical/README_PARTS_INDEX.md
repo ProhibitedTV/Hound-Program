@@ -22,6 +22,14 @@ This index tracks OpenSCAD files by part type.
 - `mechanical/alpha_v0_8/hound_alpha_v0_8_concept.scad` — concept-rooted pass using the original long wedge profile and Alien Hoof Type A foot proxy.
 - `mechanical/alpha_v0_9/hound_alpha_v0_9_refined.scad` — refined candidate that simplifies v0.8 into cleaner panels, fewer blades, slimmer shell, and Type A hoof geometry.
 
+## Alpha v1.0 Functional Breakdown
+
+- `mechanical/alpha_v1_0_functional/alpha_frame_core.scad` — spine plate, rail clamps, crossmembers, electronics tray, and battery tray.
+- `mechanical/alpha_v1_0_functional/alpha_shell_panels.scad` — split shell panels, side panels, skirt panels, and sensor carriers.
+- `mechanical/alpha_v1_0_functional/alpha_leg_module.scad` — hip cradle, paired links, pivot spacers, and hoof adapter.
+- `mechanical/alpha_v1_0_functional/alpha_hoof_type_a.scad` — printable Type A hoof module, adapter, coating coupon, and bolt gauge.
+- `mechanical/alpha_v1_0_functional/alpha_functional_assembly.scad` — layout scaffold using the functional modules.
+
 ## Head / Identity Shell
 
 - `mechanical/heads/alpha/hound_alpha_head_v02.scad` — Hound Alpha alien-animal head prototype.
@@ -92,4 +100,4 @@ This index tracks OpenSCAD files by part type.
 
 ## Current principle
 
-Boring internals. Wild exterior. Alpha v0.9 is the first narrowed candidate for continued visual refinement and eventual printable subassembly work.
+Boring internals. Wild exterior. Alpha v1.0 starts breaking the v0.9 candidate into functional printable subassemblies.
