@@ -6,6 +6,7 @@ This index tracks OpenSCAD files by part type.
 
 - `mechanical/lib/hound_constants.scad` — hardware dimensions, clearances, material assumptions.
 - `mechanical/lib/hound_primitives.scad` — rounded boxes, holes, tags, fins, lightening grids.
+- `mechanical/lib/hound_hardware_envelopes.scad` — common CAD planning envelopes for servos, controller boards, servo driver boards, and battery volume.
 
 ## Alpha Assemblies
 
@@ -15,6 +16,8 @@ This index tracks OpenSCAD files by part type.
 - `mechanical/alpha_v0_4/panel_split_test.scad` — first printable panel split test.
 - `mechanical/alpha_v0_4/leg_side_test_module.scad` — first simplified leg side module for scale and stance review.
 - `mechanical/alpha_v0_4/leg_side_test_module_v02.scad` — refined v0.4.2 leg-side module with flat link plates, pivot holes, hip bracket, and hoof adapter.
+- `mechanical/alpha_v0_5/alpha_v0_5_concept.scad` — root concept correction using rough hardware envelopes.
+- `mechanical/alpha_v0_6/hound_alpha_v0_6_assembly.scad` — grounded concept assembly that reconnects the original visual direction to hardware envelopes and printable link logic.
 
 ## Head / Identity Shell
 
@@ -86,4 +89,4 @@ This index tracks OpenSCAD files by part type.
 
 ## Current principle
 
-Boring internals. Wild exterior. v0.4 starts turning the visual direction into printable subassemblies.
+Boring internals. Wild exterior. Alpha v0.6 reconnects the root concept silhouette with realistic hobby hardware envelopes.
