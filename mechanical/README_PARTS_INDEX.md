@@ -17,7 +17,8 @@ This index tracks OpenSCAD files by part type.
 - `mechanical/alpha_v0_4/leg_side_test_module.scad` — first simplified leg side module for scale and stance review.
 - `mechanical/alpha_v0_4/leg_side_test_module_v02.scad` — refined v0.4.2 leg-side module with flat link plates, pivot holes, hip bracket, and hoof adapter.
 - `mechanical/alpha_v0_5/alpha_v0_5_concept.scad` — root concept correction using rough hardware envelopes.
-- `mechanical/alpha_v0_6/hound_alpha_v0_6_assembly.scad` — grounded concept assembly that reconnects the original visual direction to hardware envelopes and printable link logic.
+- `mechanical/alpha_v0_6/hound_alpha_v0_6_assembly.scad` — grounded concept assembly.
+- `mechanical/alpha_v0_7/hound_alpha_v0_7_assembly.scad` — silhouette tuning pass with lower shell, smaller top blades, more open legs, and claw-hoof feet.
 
 ## Head / Identity Shell
 
@@ -89,4 +90,4 @@ This index tracks OpenSCAD files by part type.
 
 ## Current principle
 
-Boring internals. Wild exterior. Alpha v0.6 reconnects the root concept silhouette with realistic hobby hardware envelopes.
+Boring internals. Wild exterior. Alpha v0.7 tunes the silhouette while keeping the hardware envelope discipline from v0.6.
