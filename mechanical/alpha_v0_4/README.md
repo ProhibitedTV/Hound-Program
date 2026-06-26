@@ -2,7 +2,7 @@
 
 Alpha v0.3 is a useful visual checkpoint. It shows the extra ankle/pastern joint helps the leg read, but the model is still a concept creature.
 
-Alpha v0.4 should start converting the visual direction into printable subassemblies for the Kobra 2 Max workflow.
+Alpha v0.4 starts converting the visual direction into printable subassemblies for the Kobra 2 Max workflow.
 
 ## Goals
 
@@ -12,6 +12,12 @@ Alpha v0.4 should start converting the visual direction into printable subassemb
 - Keep screws reachable.
 - Reserve space for battery, controller, wiring, and sensors.
 - Define one printable leg and hoof test module before attempting a full body.
+
+## Files
+
+- `panel_split_test.scad` — first body panel split experiment.
+- `leg_side_test_module.scad` — first simplified leg-side mock; useful but too toy-like.
+- `leg_side_test_module_v02.scad` — refined printable-link pass with flat link plates, pivot holes, clevis-style hip bracket, and hoof adapter.
 
 ## v0.4 priorities
 
@@ -37,3 +43,13 @@ A single leg-side test assembly:
 `hip envelope -> upper link -> knee -> lower link -> ankle/pastern -> hoof`
 
 The first print should teach us fit, scale, stance, and part accessibility.
+
+## Current review target
+
+Open `leg_side_test_module_v02.scad` and inspect:
+
+- `PART = "assembly"`
+- `PART = "front_leg"`
+- `PART = "print_layout"`
+
+Judge whether the leg now feels more like printable mechanics instead of a toy diagram.
