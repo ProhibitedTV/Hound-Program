@@ -19,6 +19,7 @@ This index tracks OpenSCAD files by part type.
 - `mechanical/alpha_v0_5/alpha_v0_5_concept.scad` — root concept correction using rough hardware envelopes.
 - `mechanical/alpha_v0_6/hound_alpha_v0_6_assembly.scad` — grounded concept assembly.
 - `mechanical/alpha_v0_7/hound_alpha_v0_7_assembly.scad` — silhouette tuning pass with lower shell, smaller top blades, more open legs, and claw-hoof feet.
+- `mechanical/alpha_v0_8/hound_alpha_v0_8_concept.scad` — concept-rooted pass using the original long wedge profile and Alien Hoof Type A foot proxy.
 
 ## Head / Identity Shell
 
@@ -90,4 +91,4 @@ This index tracks OpenSCAD files by part type.
 
 ## Current principle
 
-Boring internals. Wild exterior. Alpha v0.7 tunes the silhouette while keeping the hardware envelope discipline from v0.6.
+Boring internals. Wild exterior. Alpha v0.8 pulls the design back toward the original concept art while reusing the Alien Hoof Type A foot language.
